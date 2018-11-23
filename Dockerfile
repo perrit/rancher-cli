@@ -5,5 +5,6 @@ RUN wget -cO rancher.tar.gz https://github.com/rancher/cli/releases/download/v2.
 RUN tar xzf rancher.tar.gz
 
 FROM busybox
+LABEL maintainer="Perrit B.V. <support@perrit.nl>"
 COPY --from=fetch /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 COPY --from=fetch /tmp/rancher-v2.0.6-rc3/rancher /usr/local/bin/rancher
