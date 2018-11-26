@@ -1,8 +1,7 @@
 FROM alpine as fetch
-WORKDIR /tmp
 RUN ["/sbin/apk", "add", "ca-certificates"]
-RUN ["/usr/bin/wget", "-c", "https://github.com/rancher/cli/releases/download/v2.0.6-rc3/rancher-linux-amd64-v2.0.6-rc3.tar.gz"]
-RUN ["/bin/tar", "xzf", "rancher-linux-amd64-v2.0.6-rc3.tar.gz"]
+RUN ["/usr/bin/wget", "-cO", "/tmp/rancher.tar.gz", "https://github.com/rancher/cli/releases/download/v2.0.6-rc3/rancher-linux-amd64-v2.0.6-rc3.tar.gz"]
+RUN ["/bin/tar", "xzf", "/tmp/rancher.tar.gz", "-C", "/tmp"]
 
 FROM busybox
 LABEL maintainer="Perrit B.V. <support@perrit.nl>"
