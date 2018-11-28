@@ -1,5 +1,5 @@
 FROM alpine as fetch
-RUN ["/sbin/apk", "add", "ca-certificates"]
+RUN ["/sbin/apk", "add", "--no-cache", "ca-certificates"]
 RUN ["/usr/bin/wget", "-cO", "/tmp/rancher.tar.gz", "https://github.com/rancher/cli/releases/download/v2.0.6-rc3/rancher-linux-amd64-v2.0.6-rc3.tar.gz"]
 RUN ["/bin/tar", "xzf", "/tmp/rancher.tar.gz", "-C", "/tmp"]
 
