@@ -20,4 +20,5 @@ docker run --rm -ti perrit/rancher-cli rancher --version
 * https://github.com/rancher/cli
 * https://hub.docker.com/r/rancher/cli/
 * https://github.com/perrit/rancher-cli-container
+* https://gitlab.com/perrit/rancher-cli-container
 * https://hub.docker.com/r/perrit/rancher-cli/
