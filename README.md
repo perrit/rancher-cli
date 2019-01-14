@@ -13,6 +13,8 @@ Rancher has already made a container repository available but the images we buil
 ```bash
 docker run --rm -ti perrit/rancher-cli rancher --help
 docker run --rm -ti perrit/rancher-cli rancher --version
+docker run --rm -ti registry.gitlab.com/perrit/rancher-cli-container rancher --help
+docker run --rm -ti registry.gitlab.com/perrit/rancher-cli-container rancher --version
 ```
 
 ## Links
