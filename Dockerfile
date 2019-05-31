@@ -6,5 +6,5 @@ RUN ["/bin/tar", "xf", "/tmp/rancher.tar.xz", "-C", "/tmp"]
 FROM busybox
 LABEL maintainer="Perrit B.V. <support@perrit.nl>"
 COPY --from=fetch /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
-COPY --from=fetch /tmp/rancher-v2.0.6/rancher /usr/local/bin/rancher
+COPY --from=fetch /tmp/rancher-v2.2.0/rancher /usr/local/bin/rancher
 CMD ["/usr/local/bin/rancher", "--help"]
